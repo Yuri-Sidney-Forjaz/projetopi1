@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block content %}
+
+<section class="principal">
+    <div class="container">
+
+        <div class="box">
+            <div class="content">
+                <a href="{% url 'candidatura:apae' %}">
+
+                    <h3>APAE Pedro de Toledo</h3>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. tortor volutpat efficitur, fusce aenean ullamcorper nostra pellentesque habitant interdum varius viverra hac eu, himenaeos commodo augue faucibus congue quis proin in magna. Ex
+                        dictumst dolor lorem vulputate proin blandit imperdiet platea justo laoreet, fusce vehicula maecenas cursus porta taciti aliquam eleifend feugiat, ac elit integer accumsan nibh magnis inceptos sit quam.</p>
+                    <a href="http://www.apaepedrodetoledo.org.br/">mais informações</a>
+                </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="content">
+
+                <a href="{% url 'candidatura:abbc' %}">
+                    <h3>ABBC - Associação Beneficente do Bem Comum </h3>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. tortor volutpat efficitur, fusce aenean ullamcorper nostra pellentesque habitant interdum varius viverra hac eu, himenaeos commodo augue faucibus congue quis proin in magna. Ex
+                        dictumst dolor lorem vulputate proin blandit imperdiet platea justo laoreet, fusce vehicula maecenas cursus porta taciti aliquam eleifend feugiat, ac elit integer accumsan nibh magnis inceptos sit quam.</p>
+                    <a href="https://www.facebook.com/cci.pedrodetoledo">mais informações</a>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head lang="pt-br">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <title>Trabalhos Voluntários</title>
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="menu">
+
+            <ul>
+                <li><a href="{% url 'Blog:home' %}">Home</a></li>
+                <li><a href="{% url 'Blog:entidades' %}">Entidades Parceiras</a></li>
+                <li><a href="{% url 'Blog:sobre' %}">Sobre</a></li>
+                <li><a href="{% url 'Blog:voluntario' %}">Porque ser voluntario</a></li>
+                {% if request.user.is_staff %}
+                <li><a href="{% url 'candidatura:todas' %}">Candidaturas</a></li>
+                {% endif %}
+            </ul>
+
+            {% if request.user.is_authenticated %}
+            <li class="nav-item"> <a class="nav-link" href="{% url 'Usuario:logout' %}">Sair</a></li>
+            {% else %}
+            <ul>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'Usuario:login' %}">Login</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'Usuario:cadastro' %}">Cadastro</a></li>
+            </ul>
+
+            {% endif %}
+        </nav>
+        {% block content %} {% endblock content %}
+    </header>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

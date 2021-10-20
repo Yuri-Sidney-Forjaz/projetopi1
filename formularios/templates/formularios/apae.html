@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+
+<div class='principal'>
+    <h1>Cadastro APAE</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>
+            {{ form.nome_completo.label }} {{ form.nome_completo }}
+        </p>
+        <p>
+            {{ form.idade.errors }} {{ form.idade.label }} {{ form.idade }}
+        </p>
+        <p>
+            {{ form.contato.label }} {{ form.contato }}
+        </p>
+        <p>
+            {{ form.escolaridade.label }} {{ form.escolaridade }}
+        </p>
+        <p>
+            {{ form.sobre.label }} {{ form.sobre }}
+        </p>
+        <input type="submit" value="Enviar">
+    </form>
+
+</div>
+{% endblock content %}

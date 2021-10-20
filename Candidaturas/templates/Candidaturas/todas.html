@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidaturas</title>
+    <link rel="stylesheet" href="{% static 'b_css/bootstrap.min.css' %}">
+    <style>
+        h1 {
+            color: white;
+            top: 50%;
+            position: relative;
+            text-align: center;
+        }
+        
+        body {
+            background-color: #060c25;
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        ul {
+            color: red;
+            top: 50%;
+            position: relative;
+            text-align: center;
+            height: 50vh;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center">Todas as Candidaturas</h1>
+    {% if candidaturas %}
+    <ul>
+        {% for cand in candidaturas %}
+        <li class="text-center"> <a href="{% url 'candidatura:detalhe' cand.id %}">{{ cand }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Não existe nenhuma candidatura até o presente momento.</p>
+    {% endif %}
+</body>
+
+</html>
