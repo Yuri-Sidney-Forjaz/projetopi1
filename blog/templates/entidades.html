@@ -1,34 +1,56 @@
 {% extends "base.html" %} {% block content %}
 
-<section class="principal">
-    <div class="container">
+<!DOCTYPE html>
+<html lang="en">
 
-        <div class="box">
-            <div class="content">
-                <a href="{% url 'candidatura:apae' %}">
+<head>
 
-                    <h3>APAE Pedro de Toledo</h3>
+    <style>
+        p {
+            width: 279px;
+        }
+    </style>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. tortor volutpat efficitur, fusce aenean ullamcorper nostra pellentesque habitant interdum varius viverra hac eu, himenaeos commodo augue faucibus congue quis proin in magna. Ex
-                        dictumst dolor lorem vulputate proin blandit imperdiet platea justo laoreet, fusce vehicula maecenas cursus porta taciti aliquam eleifend feugiat, ac elit integer accumsan nibh magnis inceptos sit quam.</p>
-                    <a href="http://www.apaepedrodetoledo.org.br/">mais informações</a>
-                </a>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="principal">
+        <div class="container">
+
+            <div class="box">
+                <div class="content">
+                    <a href="{% url 'candidatura:apae' %}">
+
+                        <h3>APAE Pedro de Toledo</h3>
+
+                        <p>A Associação de Pais e Amigos dos Excepcionais (APAE) é uma associação que une toda a comunidade para prevenir e tratar a deficiência e promover o bem estar e desenvolvimento da pessoa com deficiência alguma algumas vagas disponibilizadas
+                            relacionadas são Pedagoga Especial, Psicologo e pessoas dispostas a dar qualidade de vida as pessoas com deficiencia e a construção de uma sociedade justa e solidaria.</p>
+                        </p>
+                        <a href="http://www.apaepedrodetoledo.org.br/">mais informações</a>
+                    </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="content">
+
+                    <a href="{% url 'candidatura:abbc' %}">
+                        <h3>ABBC - Associação Beneficente do Bem Comum </h3>
+
+                        <p>O ABBC visa a melhoria da condição de sociabilidade de idosos com redução e prevenção de situações de isolamento social e de institucionalização, assegurando o direito à convivência familiar e comunitária, algumas vagas disponibilizadas
+                            são recreador de aula (educador físico), Psicologo Auxiliar administrativo e pessoas disposta a desenvolver atividades voluntarias promovendo atividades em grupo com adolescentes adultos e idosos.</p>
+                        <a href="https://www.facebook.com/cci.pedrodetoledo">mais informações</a>
+                    </a>
+                </div>
             </div>
         </div>
+    </section>
+</body>
 
-        <div class="box">
-            <div class="content">
-
-                <a href="{% url 'candidatura:abbc' %}">
-                    <h3>ABBC - Associação Beneficente do Bem Comum </h3>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. tortor volutpat efficitur, fusce aenean ullamcorper nostra pellentesque habitant interdum varius viverra hac eu, himenaeos commodo augue faucibus congue quis proin in magna. Ex
-                        dictumst dolor lorem vulputate proin blandit imperdiet platea justo laoreet, fusce vehicula maecenas cursus porta taciti aliquam eleifend feugiat, ac elit integer accumsan nibh magnis inceptos sit quam.</p>
-                    <a href="https://www.facebook.com/cci.pedrodetoledo">mais informações</a>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+</html>
 
 {% endblock content %}

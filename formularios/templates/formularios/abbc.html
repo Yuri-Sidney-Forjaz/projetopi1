@@ -1,25 +1,77 @@
 {% extends "base.html" %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
-<div class='principal'>
-    <h1>Cadastro ABBC</h1>
-    <form action="" method="post">
-        {% csrf_token %}
-        <p>
-            {{ form.nome_completo.label }} {{ form.nome_completo }}
-        </p>
-        <p>
-            {{ form.idade.errors }} {{ form.idade.label }} {{ form.idade }}
-        </p>
-        <p>
-            {{ form.contato.label }} {{ form.contato }}
-        </p>
-        <p>
-            {{ form.escolaridade.label }} {{ form.escolaridade }}
-        </p>
-        <p>
-            {{ form.sobre.label }} {{ form.sobre }}
-        </p>
-        <input type="submit" value="Enviar">
-    </form>
-</div>
+<head>
+
+    <style>
+        h1 {
+            color: white;
+            text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+            font-size: 50px;
+            display: flex;
+        }
+        
+        p {
+            color: #ffffff;
+            font-size: 15px;
+            justify-content: center;
+            flex-direction: column;
+            height: 40px;
+            text-align: left;
+            display: flex;
+        }
+        
+        li {
+            color: red;
+            text-align: center;
+            position: relative;
+            height: 100%;
+            height: 1px;
+        }
+        
+        .sobre {
+            height: 100px;
+            width: 300px;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <br>
+    <div class='principal'>
+        <div class='error'>{{ form.idade.errors }}</div>
+        <h1>Cadastro ABBC</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>
+                {{ form.nome_completo.label }} {{ form.nome_completo }}
+            </p>
+            <p>
+                {{ form.idade.label }} {{ form.idade }}
+            </p>
+            <p>
+                {{ form.contato.label }} {{ form.contato }}
+            </p>
+            <p>
+                {{ form.escolaridade.label }} {{ form.escolaridade }}
+            </p>
+            <p class="sobre">
+                {{ form.sobre.label }} {{ form.sobre }}
+            </p>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+
+</body>
+
+</html>
+
 {% endblock content %}

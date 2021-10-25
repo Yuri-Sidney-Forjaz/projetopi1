@@ -15,7 +15,10 @@ class CandidaturaForm(forms.ModelForm):
         exclude = ['tipo']
         widgets = {
             'sobre': forms.Textarea(attrs={
-                'placeholder': 'Qual sua formação e qual área profissional gostaria de se candidatar?'
+                'placeholder': 'Qual sua formação e qual área profissional gostaria de se candidatar?',
+                "rows":80,
+                "cols":30
+
             })
         }
         
